@@ -29,11 +29,10 @@ jobs:
       - name: Install paket npm
         run: npm ci
 
-      - name: Render komposisi Babak1
+      - name: Render komposisi PriaKapak
         run: |
           mkdir -p out
-          npx remotion render Babak1 out/pria-kapak.mp4 --codec=h264
-
+          npx remotion render PriaKapak out/pria-kapak.mp4 --codec=h264
       - name: Upload hasil MP4 sebagai artifact
         uses: actions/upload-artifact@v4
         with:
